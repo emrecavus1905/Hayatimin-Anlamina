@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sana Özel ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- UÇAN KALPLER -->
+
+    <div id="hearts-container"></div>
+
+
+    <!-- ANA SAYFA -->
+
+    <div class="container">
+
+        <h1>
+            İyi ki hayatımdasın ❤️
+        </h1>
+
+        <p>
+            Seninle, sonsuza kadar... ♾️
+        </p>
+
+
+        <button onclick="openSecret()">
+            🔐 Sana özel bir şey var
+        </button>
+
+    </div>
+
+
+
+    <!-- GİZLİ BÖLÜM -->
+
+    <div id="secret-section">
+
+        <div class="secret-box">
+
+
+            <!-- KAPAT -->
+
+            <button
+                class="close"
+                onclick="closeSecret()"
+            >
+                ✕
+            </button>
+
+
+
+            <!-- ŞİFRE -->
+
+            <div id="password-area">
+
+                <div class="lock">
+                    🔐
+                </div>
+
+                <h2>
+                    Gizli Bölüm
+                </h2>
+
+                <p>
+                    Burası sadece sana özel...
+                </p>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Şifreyi gir..."
+                >
+
+                <button onclick="checkPassword()">
+                    Aç ❤️
+                </button>
+
+                <p id="error-message"></p>
+
+            </div>
+
+
+
+            <!-- GİZLİ İÇERİK -->
+
+            <div id="secret-content">
+
+
+                <div class="heart">
+                    ❤️
+                </div>
+
+
+                <h2>
+                    Sana söylemek istediğim birkaç şey...
+                </h2>
+
+
+                <p>
+                    Nereden başlayacağımı bilmiyorum aslında.
+                    Çünkü sana olan sevgimi birkaç cümleyle anlatmak,
+                    ne kadar uğraşırsam uğraşayım bana hep eksik geliyor.
+                </p>
+
+
+                <p>
+                    Seni o kadar çok seviyorum ki...
+                    Bazen bunu sana nasıl anlatacağımı bilemiyorum.
+                    Sadece yanında olduğumda içimde oluşan huzuru,
+                    seni düşündüğümde yüzümde oluşan gülümsemeyi
+                    ve hayatımda olduğun için hissettiğim mutluluğu
+                    kelimelere dökmek gerçekten çok zor.
+                </p>
+
+
+                <p>
+                    Sen benim için sadece sevdiğim insan değilsin.
+                    Aynı zamanda en güzel anılarımın,
+                    en içten gülüşlerimin ve geleceğe dair kurduğum
+                    en güzel hayallerimin bir parçasısın.
+                </p>
+
+
+                <p>
+                    Seninle geçirdiğim her an benim için çok değerli.
+                    Birlikte güldüğümüz küçücük bir an bile
+                    benim için unutulmayacak bir anıya dönüşüyor.
+                </p>
+
+
+                <p>
+                    Hayat her zaman mükemmel olmayabilir.
+                    Bazen tartışabiliriz, birbirimizi yanlış anlayabiliriz
+                    veya kötü günler geçirebiliriz.
+                    Ama bütün bunların arasında bilmeni istediğim
+                    tek bir şey var:
+                </p>
+
+
+                <p class="big">
+                    Ben yine seni seçerim. ❤️
+                </p>
+
+
+                <p>
+                    Çünkü ben seninle sadece güzel günleri değil,
+                    zor günleri de paylaşmak istiyorum.
+                    Birbirimizin elini bırakmadan,
+                    birlikte büyüyerek ve birlikte daha çok
+                    anı biriktirerek devam etmek istiyorum.
+                </p>
+
+
+                <p>
+                    Bazen seni izlerken içimden sadece
+                    "İyi ki..." diyorum.
+
+                    <br><br>
+
+                    İyi ki karşıma çıktın.
+
+                    <br>
+
+                    İyi ki seni tanıdım.
+
+                    <br>
+
+                    İyi ki hayatımın bir parçası oldun.
+
+                    <br>
+
+                    İyi ki biz olduk.
+                </p>
+
+
+                <p>
+                    Seninle daha çok gülmek,
+                    daha çok gezmek,
+                    daha çok fotoğraf çekilmek,
+                    daha çok saçma şeylere beraber gülmek
+                    ve yıllar sonra bugünlere baktığımızda
+                    "Ne güzel günlerimiz olmuş." diyebilmek istiyorum.
+                </p>
+
+
+                <p class="big">
+                    Seni kelimelerin anlatabileceğinden
+                    çok daha fazla seviyorum. ❤️
+                </p>
+
+
+                <p>
+                    Bu site belki sadece birkaç koddan oluşuyor.
+                    Ama içindeki her kelimenin benim için
+                    ayrı bir anlamı var.
+                    Çünkü bu sayfanın merkezinde sen varsın.
+                </p>
+
+
+                <p class="big">
+                    İyi ki varsın.
+                    <br>
+                    İyi ki benimlesin.
+                    <br>
+                    Seni çok seviyorum. ❤️
+                </p>
+
+
+
+                <!-- ŞARKI -->
+
+                <div class="music-section">
+
+                    <h3>
+                        🎵 Bizim şarkımız
+                    </h3>
+
+                    <audio
+                        id="loveSong"
+                        controls
+                    >
+
+                        <source
+                            src="music/sarki.mp3"
+                            type="audio/mpeg"
+                        >
+
+                        Tarayıcın müzik oynatmayı desteklemiyor.
+
+                    </audio>
+
+                </div>
+
+
+
+                <!-- FOTOĞRAFLAR -->
+
+                <div class="photos-section">
+
+                    <h3>
+                        📸 Bizim Anılarımız
+                    </h3>
+
+
+                    <div class="photo-grid">
+
+
+                        <div class="photo-card">
+
+                            <img
+                                src="images/foto1.jpg"
+                                alt="Anımız 1"
+                            >
+
+                        </div>
+
+
+                        <div class="photo-card">
+
+                            <img
+                                src="images/foto2.jpg"
+                                alt="Anımız 2"
+                            >
+
+                        </div>
+
+
+                        <div class="photo-card">
+
+                            <img
+                                src="images/foto3.jpg"
+                                alt="Anımız 3"
+                            >
+
+                        </div>
+
+
+                        <div class="photo-card">
+
+                            <img
+                                src="images/foto4.jpg"
+                                alt="Anımız 4"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="signature">
+
+                    Sen, ben ve sonsuza kadar... ♾️
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

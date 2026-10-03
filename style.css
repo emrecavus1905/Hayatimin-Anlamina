@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #18000d,
+            #45001f,
+            #18000d
+        );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+
+
+/* =========================
+   ANA SAYFA
+========================= */
+
+.container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.container h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.container p {
+
+    color: #ffb6ca;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 30px;
+
+    padding: 15px 30px;
+
+    background: #ff3975;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+
+    background: #ff1f63;
+
+}
+
+
+
+/* =========================
+   UÇAN KALPLER
+========================= */
+
+#hearts-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+
+}
+
+
+.floating-heart {
+
+    position: absolute;
+
+    bottom: -40px;
+
+    animation:
+        flyHeart linear forwards;
+
+}
+
+
+@keyframes flyHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* =========================
+   GİZLİ BÖLÜM
+========================= */
+
+#secret-section {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.88);
+
+    z-index: 100;
+
+}
+
+
+#secret-section.active {
+
+    display: flex;
+
+}
+
+
+
+/* =========================
+   GİZLİ KUTU
+========================= */
+
+.secret-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 45px 30px;
+
+    border-radius: 25px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #35001b,
+            #18000d
+        );
+
+    box-shadow:
+
+        0 0 60px
+        rgba(255, 50, 120, 0.4);
+
+}
+
+
+
+/* =========================
+   KAPAT
+========================= */
+
+.close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+
+/* =========================
+   ŞİFRE
+========================= */
+
+.lock {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.secret-box h2 {
+
+    color: #ff9fba;
+
+    margin-bottom: 20px;
+
+}
+
+
+.secret-box p {
+
+    color: #ffd6e3;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+}
+
+
+#password {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 30px;
+
+    border:
+
+        1px solid
+
+        #ff719e;
+
+    outline: none;
+
+    background: #17000c;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 16px;
+
+}
+
+
+#error-message {
+
+    color: #ff5c87 !important;
+
+}
+
+
+
+/* =========================
+   MEKTUP
+========================= */
+
+#secret-content {
+
+    display: none;
+
+    text-align: left;
+
+}
+
+
+.heart {
+
+    text-align: center;
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartbeat 1.2s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+#secret-content h2 {
+
+    text-align: center;
+
+    font-size: 30px;
+
+}
+
+
+.big {
+
+    color: #ff719e !important;
+
+    font-size: 23px !important;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+
+
+/* =========================
+   ŞARKI
+========================= */
+
+.music-section {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    margin-bottom: 45px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 80, 130, 0.08);
+
+}
+
+
+.music-section h3 {
+
+    color: #ff9fba;
+
+    margin-bottom: 20px;
+
+}
+
+
+audio {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+
+/* =========================
+   FOTOĞRAFLAR
+========================= */
+
+.photos-section {
+
+    margin-top: 20px;
+
+}
+
+
+.photos-section h3 {
+
+    text-align: center;
+
+    color: #ff9fba;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.photo-card {
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border:
+        2px solid
+        rgba(255, 100, 150, 0.4);
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 40, 110, 0.15);
+
+}
+
+
+.photo-card img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+
+}
+
+
+.photo-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+
+/* =========================
+   İMZA
+========================= */
+
+.signature {
+
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        #6b2342;
+
+    color: #ff9fba;
+
+    font-style: italic;
+
+    padding-bottom: 10px;
+
+}
+
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 600px) {
+
+    .container h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .secret-box {
+
+        padding:
+            40px 20px;
+
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .photo-card img {
+
+        height: 280px;
+
+    }
+
+}
